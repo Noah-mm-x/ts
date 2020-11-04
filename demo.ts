@@ -61,14 +61,26 @@
 //   return val
 // }
 // log(1)
-type Point = { x: number, y: number }
-function getPoint(data: Point) {
-  console.log("mfx")
-  console.log(data.x, data.y)
-}
-let p1 = {
-  x: 2,
-  y: 10
-}
-getPoint(p1)  
+// type Point = { x: number, y: number }
+// function getPoint(data: Point) {
+//   console.log("mfx")
+//   console.log(data.x, data.y)
+// }
+// let p1 = {
+//   x: 2,
+//   y: 10
+// }
+// getPoint(p1)  
+// function add({ x, y }: { x: number, y: number }): number {
+//   return x + y
+// }
+// console.log(add({ x: 2, y: 4 }))
 
+const fnc = (str: string): string => {
+  return str + str
+}
+
+// 记忆方法：前面（(str: string) => string）是定义类型，后面（(str) => {return str + str}）是具体的值
+const fnc1: (str: string) => string = (str) => {
+  return str + str
+}

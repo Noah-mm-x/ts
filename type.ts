@@ -53,3 +53,36 @@ let strValue: any = "hello word"
 // let strLength: number = (<string>strValue).length
 let strLength: number = (strValue as string).length
 console.log(strLength)
+
+// let objectArr: {name: string}[]=[{name: 'dd'}]
+// console.log(objectArr)
+type User = {
+  name: string,
+  age: number
+}
+let objectArr: User[] = [
+  {
+    name: '张三',
+    age: 2
+  }
+]
+
+// 报错
+// class Teacher {
+//   name: string  
+//   age: number
+// }
+class Teacher {
+  name: string
+  age: number
+  constructor(name: string, age: number) {
+    this.name = name
+    this.age = age
+  }
+}
+let tObjectArr: Teacher[] = [
+  {
+    name: 'zz',
+    age: 2
+  }
+]
