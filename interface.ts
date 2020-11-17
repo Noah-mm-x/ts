@@ -10,6 +10,10 @@ interface Person {
   // 方法
   say(): string
 }
+//  定义函数类型接口
+interface SayHi{
+  (word: string): string
+}
 const getPersonName = (person: Person): string => {
   console.log(person.name)
   return person.name
@@ -43,5 +47,8 @@ class User implements Person {
     return 'hi'
   }
 }
-
+const aSay: SayHi = (word:string)=>{
+  return word
+}
+console.log(aSay('33'))
 export {}

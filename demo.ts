@@ -76,11 +76,16 @@
 // }
 // console.log(add({ x: 2, y: 4 }))
 
-const fnc = (str: string): string => {
-  return str + str
-}
+// const fnc = (str: string): string => {
+//   return str + str
+// }
 
-// 记忆方法：前面（(str: string) => string）是定义类型，后面（(str) => {return str + str}）是具体的值
-const fnc1: (str: string) => string = (str) => {
-  return str + str
+// // 记忆方法：前面（(str: string) => string）是定义类型，后面（(str) => {return str + str}）是具体的值
+// const fnc1: (str: string) => string = (str) => {
+//   return str + str
+// }
+function add(
+  { a, b }: { a: number, b: number }): number {
+  return a + b
 }
+console.log(add({ a: 2, b: 3 }))
